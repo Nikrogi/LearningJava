@@ -2,30 +2,29 @@
 //Выведите true, если эти числа составляют валидную дату, и false - в противном случае.
 package stepik.usloviya;
 import java.util.Scanner;
-public class VisokosGod {
+public class ValidationData {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int d = sc.nextInt();
-        int m = sc.nextInt();
-        int y = sc.nextInt();
-        boolean a;
-        if ((y % 4 == 0 && y % 100 != 0 || y % 400 == 0)) {
+        int day = sc.nextInt();
+        int month = sc.nextInt();
+        int year = sc.nextInt();
+        boolean a; //проверка на високосный год
+        if ((year % 4 == 0 && year % 100 != 0 || year % 400 == 0)) {
             a = true; // true- високосный
         } else {
             a = false;
         }
-        if ((d < 1 || y < 1 || m < 1 || d > 31 || m > 12)) {
+        if ((day < 1 || year < 1 || month < 1 || day > 31 || month > 12)) {
             System.out.println("false");
-        } else if ((m == 2 || m == 4 || m == 6 || m == 9 || m == 11) && d > 30) {
+        } else if ((month == 2 || month == 4 || month == 6 || month == 9 || month == 11) && day > 30) {
             System.out.println("false");
-        } else if (a == true && m == 2 && d > 29) {
+        } else if (a && month == 2 && day > 29) {
             System.out.println("false");
-        } else if (a == false && m == 2 && d >28) {
-            System.out.println("false");
+        } else if (!a && month == 2 && day >28) {
+            System.out.println("Invalid date");
         } else {
-            System.out.println("true");
+            System.out.println("Valid date");
         }
-
     }
 }
 

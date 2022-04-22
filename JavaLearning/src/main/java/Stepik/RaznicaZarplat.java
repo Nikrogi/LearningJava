@@ -16,7 +16,7 @@
 
 package stepik.usloviya;
 import java.util.Scanner;
-public class Zarplata {
+public class RaznicaZarplat {
     static int maxZp;
     static int minZp;
     public static void main(String[] args) {
@@ -32,8 +32,6 @@ public class Zarplata {
             maxZp = secondZp;
         } else if (thirdZp >= firstZp && thirdZp >= secondZp) {
             maxZp = thirdZp;
-        } else {
-            System.out.println("Что то пошло не так");
         }
         // определили макс зп
 
@@ -43,8 +41,6 @@ public class Zarplata {
             minZp = secondZp;
         } else if (thirdZp <= firstZp && thirdZp <= secondZp) {
             minZp = thirdZp;
-        } else {
-            System.out.println("Что то пошло не так");
         }
         //определили мин зп
         if ((maxZp - minZp) > raznica) {

@@ -1,7 +1,7 @@
 package stepik.usloviya;
 //На вход подаётся три целых числа. Выведите среднее из них (т.е. не минимальное и не максимальное).
 import java.util.Scanner;
-public class SredneeChislo {
+public class NumberInTheMiddle {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
