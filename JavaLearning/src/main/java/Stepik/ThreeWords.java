@@ -37,8 +37,6 @@ public class ThreeWords {
             System.out.println(firstWord);
             System.out.println(thirdWord);
             System.out.println(secondWord);
-        } else {
-            System.out.println("Fuck You");
         }
     }
 }
