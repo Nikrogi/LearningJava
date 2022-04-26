@@ -1,4 +1,4 @@
-package Stepik;
+package main.java.stepik;
 import java.util.Scanner;
 public class ThreeWords {
     public static void main(String[] args) {
